@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Shortener</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔗 URL Shortener</h1>
+            <p class="subtitle">Shorten your long URLs with ease</p>
+        </header>
+
+        <main>
+            <section class="shorten-section">
+                <form id="shorten-form">
+                    <div class="form-group">
+                        <input 
+                            type="url" 
+                            id="url-input" 
+                            placeholder="Enter your URL here (e.g., https://example.com)" 
+                            required
+                        >
+                        <button type="submit" id="shorten-btn">Shorten URL</button>
+                    </div>
+                </form>
+                <div id="result-container" class="hidden">
+                    <div class="result-box">
+                        <label>Your shortened URL:</label>
+                        <div class="result-url">
+                            <input type="text" id="short-url" readonly>
+                            <button id="copy-btn" class="copy-btn">Copy</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="error-message" class="error hidden"></div>
+            </section>
+
+            <section class="urls-section">
+                <h2>All Shortened URLs</h2>
+                <div id="loading" class="loading">Loading URLs...</div>
+                <div id="urls-container">
+                    <table id="urls-table" class="hidden">
+                        <thead>
+                            <tr>
+                                <th>Original URL</th>
+                                <th>Short Code</th>
+                                <th>Views</th>
+                                <th>Created</th>
+                            </tr>
+                        </thead>
+                        <tbody id="urls-tbody">
+                        </tbody>
+                    </table>
+                    <div id="no-urls" class="no-urls hidden">
+                        <p>No URLs shortened yet. Create your first shortened URL above!</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="/static/js/app.js"></script>
+</body>
+</html>
+
+
+
+
