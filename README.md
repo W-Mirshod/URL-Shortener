@@ -80,9 +80,9 @@ uvicorn app.main:app --reload
 http://localhost:8000
 ```
 
-3. Enter a URL in the form and click "Shorten URL"
+5. Enter a URL in the form and click "Shorten URL"
 
-4. Your shortened URL will be displayed and you can copy it to clipboard
+6. Your shortened URL will be displayed and you can copy it to clipboard
 
 ## API Endpoints
 
