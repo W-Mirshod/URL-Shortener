@@ -10,5 +10,6 @@ services:
       - ./url_shortener.db:/app/url_shortener.db
     environment:
       - PYTHONUNBUFFERED=1
+      - PYTHONPATH=/app
     restart: unless-stopped
 
